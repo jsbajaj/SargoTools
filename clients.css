@@ -1,0 +1,323 @@
+/* Reset and Base Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInSlideDown 1s ease-in-out;
+}
+
+.logo-container img {
+    max-height: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffb400;
+    transform: scale(1.05);
+}
+
+/* Clients Hero Section */
+.clients-hero {
+    background-image: url('images/hero-bg.jpg'); /* Replace with a relevant background */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.clients-hero h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.clients-hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: slideInFromRight 1.2s ease-in-out;
+}
+
+.clients-hero .hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ffb400;
+    color: #0c1c3a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.clients-hero .hero-btn:hover {
+    transform: translateY(-5px);
+    background-color: #e6a200;
+}
+
+/* Client Grid Styles */
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.client-card {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.client-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.client-logo {
+    max-width: 80%;
+    max-height: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.client-card:hover .client-logo {
+    transform: scale(1.1);
+}
+
+/* Export Countries Section */
+.export-countries {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.export-countries h2 {
+    font-size: 2.5em;
+    color: #0c1c3a;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.export-images {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.export-card {
+    width: 200px;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.export-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.export-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Keyframe Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+footer {
+    background-color: #000000; /* Dark background */
+    color: #f1f1f1; /* Light text */
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+    font-size: 1em;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a,
+.footer-section p a {
+    color: #ffffff; /* Yellow link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-section ul li a:hover,
+.footer-section p a:hover {
+    color: #fdc645; /* Highlight white on hover */
+    text-decoration: underline;
+    
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #cccccc;
+}
+
+.footer-bottom a {
+    color: #fdc645;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Icons */
+.icon-address:before {
+    content: '\1F3E0'; /* Unicode for house icon */
+    margin-right: 10px;
+}
+
+.icon-email:before {
+    content: '\2709'; /* Unicode for envelope icon */
+    margin-right: 10px;
+}
+
+.icon-phone:before {
+    content: '\260E'; /* Unicode for telephone icon */
+    margin-right: 10px;
+}

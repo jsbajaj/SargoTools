@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards Gallery - Sargo Tools Pvt. Ltd.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/awards.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="scroll-animate">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Sargo Tools Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="clients.html">Our Clients</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section scroll-animate">
+        <h1>Awards Gallery</h1>
+        <p>Home > Awards Gallery</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section scroll-animate">
+        <div class="gallery-grid">
+            <!-- Each award item -->
+            <div class="gallery-item">
+                <img src="images/award1.jpeg" alt="Award 1" onclick="showPopup(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/awards2.jpeg" alt="Award 2" onclick="showPopup(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/award4.jpeg" alt="Award 4" onclick="showPopup(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/award3.jpeg" alt="Award 3" onclick="showPopup(this)">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/awards5.jpeg" alt="Award 5" onclick="showPopup(this)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Section -->
+    <div id="imagePopup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img class="popup-content" id="popupImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="scroll-animate">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sargo Tools Pvt. Ltd.</h3>
+                <hr class="footer-underline">
+                <p>Sargo Tools Pvt. Ltd. is in the business of manufacturing tubular components & sheet metal components along with other turned and machined parts for the last three decades.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Product Range</h3>
+                <hr class="footer-underline">
+                <ul>
+                    <li><a href="products.html#loops">Loops</a></li>
+                    <li><a href="products.html#taper-id-loop">Taper I/D Loop</a></li>
+                    <li><a href="products.html#turned-rolled-loops">Turned Rolled Loops</a></li>
+                    <li><a href="products.html#mounting-sleeves">Mounting Sleeves</a></li>
+                    <li><a href="products.html#turned-components">Turned Components</a></li>
+                    <li><a href="products.html#suspension-bushes">Suspension Bushes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <hr class="footer-underline">
+                <!-- <p>
+                    <i class="icon-address"></i>
+                    <a href="contact.html#unit1-map">Sargo Tools Pvt. Ltd. - Unit 1</a><br>
+                    12/2, Mathura Road, Faridabad, Haryana - 121003
+                </p>
+                <p>
+                    <i class="icon-address"></i>
+                    <a href="contact.html#unit2-map">Sargo Tools Pvt. Ltd. - Unit 2</a><br>
+                    Vill. JATOLA, TATARPUR Ind. Area, Palwal, Haryana - 121102
+                </p> -->
+                <p>
+                    <i class="icon-email"></i>
+                    <a href="mailto:sargotools@yahoo.com">sargotools@yahoo.com</a>
+                </p>
+                <p>
+                    <i class="icon-email"></i>
+                    <a href="mailto:info@sargotools.com">info@sargotools.com</a>
+                </p>
+                <p>
+                    <i class="icon-phone"></i>
+                    +91-9891198363, +91-9810354860
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sargo Tools Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Popup functionality
+        function showPopup(img) {
+            const popup = document.getElementById('imagePopup');
+            const popupImage = document.getElementById('popupImage');
+            const caption = document.getElementById('caption');
+            
+            popup.style.display = "block";
+            popupImage.src = img.src;
+            caption.innerHTML = img.alt;
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('imagePopup');
+            popup.style.display = "none";
+        }
+
+        // Scroll-triggered animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+
+            const elementInView = (el, offset = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight) / offset
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('active');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+            handleScrollAnimation(); // Trigger once on load
+        });
+    </script>
+</body>
+</html>

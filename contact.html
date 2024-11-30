@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sargo Tools</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Base styles -->
+    <link rel="stylesheet" href="css/contact.css"> <!-- Specific styles for Contact Us page -->
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Sargo Tools Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="clients.html">Our Clients</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Contact Header Section -->
+        <section class="contact-header scroll-animate">
+            <h1>Contact Us</h1>
+            <p>Home > Contact Us</p>
+        </section>
+
+        <!-- Contact Form and Details Section -->
+        <section class="contact-section">
+            <div class="contact-container scroll-animate">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Get in touch with us</h2>
+                    <p>Please fill up the form below and submit your enquiry.</p>
+                    <form class="contact-form" action="https://formspree.io/f/xvgovkqd" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone No.</label>
+                            <input type="text" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="contact-details-container">
+                    <h2>Contact Sargo Tools Pvt. Ltd.</h2>
+                    <p><strong>Address:</strong></p>
+                    <p><strong>Sargo Tools Pvt. Ltd. - Unit 1</strong><br>12/2, Mathura Road, Faridabad, Haryana - 121003</p>
+                    <p><strong>Sargo Tools Pvt. Ltd. - Unit 2</strong><br>Palwal Rd, Vill, Khajurka, Palwal, Haryana - 121102, India</p>
+                    <p><strong>Sargo Tools Pvt. Ltd. - Unit 3</strong><br>Plot no. 884, IMT Main Rd, Sector 69, Faridabad, Haryana - 121004, India</p>
+                    <p><strong>Phone:</strong> +91-9891198363, +91-9810354860</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@sargotools.com">info@sargotools.com</a>         <a href="mailto:sargotools@yahoo.com">sargotools@yahoo.com</a></p>
+                </div>
+            </div>
+
+            <!-- Embedded Maps -->
+            <div class="map-container scroll-animate">
+                <!-- Unit 1 -->
+                <div class="map-box">
+                    <iframe src="https://maps.google.com/maps?q=12/2,%20Mathura%20Road,%20Faridabad,%20Haryana%20-%20121003&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+                    <div class="map-hover-text">Unit 1</div>
+                </div>
+            
+                <!-- Unit 2 -->
+                <div class="map-box">
+                    <iframe src="https://maps.google.com/maps?q=28.237694772522143,77.31046915436188&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+                    <div class="map-hover-text">Unit 2</div>
+                </div>
+            
+                <!-- Unit 3 -->
+                <div class="map-box">
+                    <iframe src="https://maps.google.com/maps?q=Plot%20no.%20884,%20IMT%20Main%20Rd,%20Sector%2069,%20Faridabad,%20Haryana%20-%20121004,%20India&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+                    <div class="map-hover-text">Unit 3</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sargo Tools Pvt. Ltd.</h3>
+                <hr class="footer-underline">
+                <p>Sargo Tools Pvt. Ltd. is in the business of manufacturing tubular components & sheet metal components along with other turned and machined parts for the last three decades.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Product Range</h3>
+                <hr class="footer-underline">
+                <ul>
+                    <li><a href="products.html#loops">Loops</a></li>
+                    <li><a href="products.html#taper-id-loop">Taper I/D Loop</a></li>
+                    <li><a href="products.html#turned-rolled-loops">Turned Rolled Loops</a></li>
+                    <li><a href="products.html#mounting-sleeves">Mounting Sleeves</a></li>
+                    <li><a href="products.html#turned-components">Turned Components</a></li>
+                    <li><a href="products.html#suspension-bushes">Suspension Bushes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <hr class="footer-underline">
+                <!-- <p>
+                    <i class="icon-address"></i>
+                    <a href="contact.html#unit1-map">Sargo Tools Pvt. Ltd. - Unit 1</a><br>
+                    12/2, Mathura Road, Faridabad, Haryana - 121003
+                </p>
+                <p>
+                    <i class="icon-address"></i>
+                    <a href="contact.html#unit2-map">Sargo Tools Pvt. Ltd. - Unit 2</a><br>
+                    Vill. JATOLA, TATARPUR Ind. Area, Palwal, Haryana - 121102
+                </p>
+                <p>
+                    <i class="icon-address"></i>
+                    <a href="contact.html#unit3-map">Sargo Tools Pvt. Ltd. - Unit 3</a><br>
+                    Plot no. 884, IMT Main Rd, Sector 69, Faridabad, Haryana - 121004
+                </p> -->
+                <p>
+                    <i class="icon-email"></i>
+                    <a href="mailto:sargotools@yahoo.com">sargotools@yahoo.com</a>
+                </p>
+                <p>
+                    <i class="icon-email"></i>
+                    <a href="mailto:info@sargotools.com">info@sargotools.com</a>
+                </p>
+                <p>
+                    <i class="icon-phone"></i>
+                    +91-9891198363, +91-9810354860
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sargo Tools Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll-triggered animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollElements = document.querySelectorAll('.scroll-animate, .map-box');
+
+            const elementInView = (el, offset = 1.25) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight) / offset
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('active');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+
+            handleScrollAnimation(); // Trigger animations for elements in view on load
+        });
+    </script>
+</body>
+</html>
