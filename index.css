@@ -49,6 +49,65 @@ nav ul li a:hover {
     color: #fdc645;
 }
 
+/* Hamburger Menu */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    z-index: 1000;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+    nav ul li a:hover {
+        color: #fdc645;
+    }
+}
+
+
+
 /* Hero Carousel */
 /* .hero-carousel {
     position: relative;
@@ -100,8 +159,8 @@ nav ul li a:hover {
 }
 
 .hero-text h1 {
-    font-family: 'Pacifico', cursive; /* Use a cursive font */
-    font-size: 6rem; /* Adjust font size */
+    font-family: 'Ariel'; /* Use a cursive font */
+    font-size: 5.6rem; /* Adjust font size */
     color: #fdc645;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     animation: typing-heading 5s steps(40, end), blink 0.1s step-end infinite;
@@ -113,7 +172,7 @@ nav ul li a:hover {
 }
 
 .animated-paragraph {
-    font-family: 'Ariel', cursive; /* Same font as heading */
+    font-family: 'Ariel'; /* Same font as heading */
     font-size: 2rem;
     color: #ffffff; /* Match color with heading */
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
@@ -266,18 +325,18 @@ nav ul li a:hover {
 /* Purpose Section */
 .purpose-section {
     position: relative;
+    /* width: 100%; Ensure it takes full width */
     height: 450px;
-    background-image: url('purpose2.jpeg');
-    background-size: cover;
-    background-position: center;
+     background-image: url('purpose2.jpeg');
+    background-size: cover; /* Make the image cover the section without grey space */
+    background-position: center; /* Center the image */
     background-repeat: no-repeat;
     display: flex;
-    opacity: 0.9;
-    justify-content: left;
-    align-items: left;
-    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Adjust padding for better text placement */
+    box-sizing: border-box; /* Include padding within the width */
 }
-
 .purpose-section .overlay {
     position: absolute;
     top: 0;
@@ -289,7 +348,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding: 20px;
+    /* padding: 20px; */
     animation: fadeIn 1.2s ease-in-out;
 }
 
@@ -298,6 +357,7 @@ nav ul li a:hover {
     font-weight: bold;
     color: #fdc645;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-left: 10px;
 }
 
 .purpose-section p {
@@ -305,6 +365,7 @@ nav ul li a:hover {
     line-height: 1.6;
     color: #f1f1f1;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-left: 10px;
 }
 
 /* Core Values Section */
@@ -463,6 +524,7 @@ footer {
     margin-right: 10px;
 }
 
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -500,3 +562,178 @@ footer {
         border-color: transparent;
     }
 }
+
+/* Responsive Styles */
+
+@media (max-width: 1200px) {
+    .about-container {
+        gap: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .purpose-section {
+        height: 300px; /* Allow the height to adjust dynamically */
+        width: 400px;
+        /* background-size: contain; Ensure the entire image fits within the section */
+        /* background-position: top center; Adjust position for better alignment */
+        padding: 20px; 
+    }
+
+    .purpose-section p{
+        font-size: 0.8rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px; /* Positioned below the header */
+        right: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+    nav ul li a:hover {
+        color: #fdc645;
+    }
+
+    /* Footer Adjustments */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 500px;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content h1 {
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Values Section */
+    .value-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Footer Adjustments */
+    .footer-section h3 {
+        font-size: 1.2em;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 0.9em;
+    }
+
+    /* Header Adjustments */
+    header {
+        padding: 10px 20px;
+    }
+
+    
+    /* Hero Section */
+    .hero-section {
+        height: 400px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    /* About Section */
+    .about-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 0.8rem;
+    }
+
+    .about-image img {
+        width: 90%;
+    }
+
+    /* Purpose Section */
+    .purpose-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .purpose-section p {
+        font-size: 0.9rem;
+    }
+
+    /* Values Section */
+    .values-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .value-card {
+        width: 100%;
+    }
+
+    /* Footer Links */
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .purpose-section {
+        height: 300px;
+        width: 410px;
+        /* background-size: auto; Keeps the image fully visible */
+        background-position: center; /* Center-align the image */
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+}
+
