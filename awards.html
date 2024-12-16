@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awards Gallery - Sargo Tools Pvt. Ltd.</title>
-<!--     <link rel="stylesheet" href="css/styles.css"> -->
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="awards.css">
+
 </head>
 <body>
     <!-- Header -->
@@ -15,8 +16,13 @@
                 <img src="logo.png" alt="Sargo Tools Logo" class="logo">
             </a>
         </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="awards.html">Awards</a></li>
@@ -25,7 +31,7 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-    </header>
+        </header>
 
     <!-- Hero Section -->
     <section class="hero-section scroll-animate">
@@ -64,7 +70,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="scroll-animate">
+    <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Sargo Tools Pvt. Ltd.</h3>
@@ -95,6 +101,11 @@
                     <i class="icon-address"></i>
                     <a href="contact.html#unit2-map">Sargo Tools Pvt. Ltd. - Unit 2</a><br>
                     Vill. JATOLA, TATARPUR Ind. Area, Palwal, Haryana - 121102
+                </p>
+                <p>
+                    <i class="icon-address"></i>
+                    <a href="contact.html#unit3-map">Sargo Tools Pvt. Ltd. - Unit 3</a><br>
+                    Plot no. 884, IMT Main Rd, Sector 69, Faridabad, Haryana - 121004
                 </p> -->
                 <p>
                     <i class="icon-email"></i>
@@ -161,6 +172,14 @@
             });
             handleScrollAnimation(); // Trigger once on load
         });
+       // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    </script>
     </script>
 </body>
 </html>
