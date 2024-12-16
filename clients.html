@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Clients - Sargo Tools Pvt. Ltd.</title>
-<!--     <link rel="stylesheet" href="css/styles.css"> <!-- Base styles -->
+    <!-- <link rel="stylesheet" href="css/styles.css"> Base styles -->
     <link rel="stylesheet" href="clients.css"> <!-- Specific styles for Clients page -->
 </head>
 <body>
@@ -14,8 +14,13 @@
                 <img src="logo.png" alt="Sargo Tools Logo" class="logo">
             </a>
         </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="awards.html">Awards</a></li>
@@ -152,5 +157,14 @@
             <p>&copy; 2024 Sargo Tools Pvt. Ltd. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
