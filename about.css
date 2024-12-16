@@ -84,6 +84,61 @@ nav ul li a {
 nav ul li a:hover {
     color: #fdc645;
 }
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px; /* Align to the right */
+    top: 35px; /* Position relative to the top of the header */
+    z-index: 1000;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px; /* Positioned below the header */
+        right: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+    nav ul li a:hover {
+        color: #fdc645;
+    }
+}
 
 /* About Us Header Section */
 .about-header {
@@ -245,10 +300,9 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #000000;
-    color: #f1f1f1;
+    background-color: #000000; /* Dark background */
+    color: #f1f1f1; /* Light text */
     padding: 40px 20px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .footer-container {
@@ -289,14 +343,14 @@ footer {
 
 .footer-section ul li a,
 .footer-section p a {
-    color: #ffffff;
+    color: #ffffff; /* Yellow link color */
     text-decoration: none;
     font-weight: bold;
 }
 
 .footer-section ul li a:hover,
 .footer-section p a:hover {
-    color: #fdc645;
+    color: #fdc645; /* Highlight white on hover */
     text-decoration: underline;
 }
 
@@ -326,19 +380,27 @@ footer {
     color: #cccccc;
     text-decoration: none;
     margin: 0 5px;
-    transition: color 0.3s, transform 0.3s;
 }
 
 .footer-links a:hover {
     color: #ffffff;
-    transform: translateY(-3px);
+    text-decoration: underline;
 }
 
 /* Icons */
-.icon-address:before,
-.icon-email:before,
+.icon-address:before {
+    content: '\1F3E0'; /* Unicode for house icon */
+    margin-right: 10px;
+}
+
+.icon-email:before {
+    content: '\2709'; /* Unicode for envelope icon */
+    margin-right: 10px;
+}
+
 .icon-phone:before {
-    animation: bounce 2s infinite;
+    content: '\260E'; /* Unicode for telephone icon */
+    margin-right: 10px;
 }
 
 @keyframes bounce {
@@ -349,3 +411,41 @@ footer {
         transform: translateY(-5px);
     }
 }
+@media (max-width: 768px) {
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+    /* body {
+        font-size: 0.9em;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    } */
+
+    .footer-section h3 {
+        font-size: 1.2em;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 0.9em;
+    }
+}
+
