@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Sargo Tools</title>
-<!--     <link rel="stylesheet" href="css/styles.css"> <!-- Base styles --> 
-    <link rel="stylesheet" href="contact.css"> <!-- Specific styles for Contact Us page -->
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header>
@@ -14,8 +13,13 @@
                 <img src="logo.png" alt="Sargo Tools Logo" class="logo">
             </a>
         </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="awards.html">Awards</a></li>
@@ -68,25 +72,20 @@
                     <p><strong>Sargo Tools Pvt. Ltd. - Unit 2</strong><br>Palwal Rd, Vill, Khajurka, Palwal, Haryana - 121102, India</p>
                     <p><strong>Sargo Tools Pvt. Ltd. - Unit 3</strong><br>Plot no. 884, IMT Main Rd, Sector 69, Faridabad, Haryana - 121004, India</p>
                     <p><strong>Phone:</strong> +91-9891198363, +91-9810354860</p>
-                    <p><strong>Email:</strong> <a href="mailto:info@sargotools.com">info@sargotools.com</a>         <a href="mailto:sargotools@yahoo.com">sargotools@yahoo.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@sargotools.com">info@sargotools.com</a> <a href="mailto:sargotools@yahoo.com">sargotools@yahoo.com</a></p>
                 </div>
             </div>
 
             <!-- Embedded Maps -->
             <div class="map-container scroll-animate">
-                <!-- Unit 1 -->
                 <div class="map-box">
                     <iframe src="https://maps.google.com/maps?q=12/2,%20Mathura%20Road,%20Faridabad,%20Haryana%20-%20121003&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
                     <div class="map-hover-text">Unit 1</div>
                 </div>
-            
-                <!-- Unit 2 -->
                 <div class="map-box">
                     <iframe src="https://maps.google.com/maps?q=28.237694772522143,77.31046915436188&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
                     <div class="map-hover-text">Unit 2</div>
                 </div>
-            
-                <!-- Unit 3 -->
                 <div class="map-box">
                     <iframe src="https://maps.google.com/maps?q=Plot%20no.%20884,%20IMT%20Main%20Rd,%20Sector%2069,%20Faridabad,%20Haryana%20-%20121004,%20India&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
                     <div class="map-hover-text">Unit 3</div>
@@ -94,7 +93,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="scroll-animate">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Sargo Tools Pvt. Ltd.</h3>
@@ -125,11 +124,6 @@
                     <i class="icon-address"></i>
                     <a href="contact.html#unit2-map">Sargo Tools Pvt. Ltd. - Unit 2</a><br>
                     Vill. JATOLA, TATARPUR Ind. Area, Palwal, Haryana - 121102
-                </p>
-                <p>
-                    <i class="icon-address"></i>
-                    <a href="contact.html#unit3-map">Sargo Tools Pvt. Ltd. - Unit 3</a><br>
-                    Plot no. 884, IMT Main Rd, Sector 69, Faridabad, Haryana - 121004
                 </p> -->
                 <p>
                     <i class="icon-email"></i>
@@ -151,6 +145,14 @@
     </footer>
 
     <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
         // Scroll-triggered animations
         document.addEventListener('DOMContentLoaded', () => {
             const scrollElements = document.querySelectorAll('.scroll-animate, .map-box');
