@@ -21,7 +21,7 @@ body {
 }
 
 /* Scroll-triggered animations */
-.scroll-animate {
+/* .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -30,7 +30,7 @@ body {
 .scroll-animate.active {
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
 /* Header and Navigation */
 header {
@@ -74,9 +74,66 @@ nav ul li a:hover {
     color: #fdc645;
 }
 
+/* Hamburger Menu */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px; /* Align to the right */
+    top: 35px; /* Position relative to the top of the header */
+    z-index: 1000;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px; /* Positioned below the header */
+        right: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+    nav ul li a:hover {
+        color: #fdc645;
+    }
+}
+/* Hero Section */
 .hero-section {
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     color: #000000;
     padding: 60px 20px;
 }
@@ -92,6 +149,7 @@ nav ul li a:hover {
     color: #000000;
 }
 
+/* Gallery Section */
 .gallery-section {
     padding: 40px 20px;
     background-color: #ffffff;
@@ -267,4 +325,85 @@ footer {
 .icon-phone:before {
     content: '\260E'; /* Unicode for telephone icon */
     margin-right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        gap: 50px;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: 300px;
+    }
+    .gallery-section{
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        gap: 20px;
+        justify-content: center;
+    }
+    .gallery-section{
+        height: 100%;
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        flex-direction: column;
+    }
+
+    .gallery-section{
+        height: 100%;
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* body {
+        font-size: 0.9em;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    } */
+
+    .footer-section h3 {
+        font-size: 1.2em;
+    }
+
+    .footer-section p,
+    .footer-section li {
+        font-size: 0.9em;
+    }
 }
