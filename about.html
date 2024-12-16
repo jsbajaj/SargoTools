@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Sargo </title>
+    <title>About Sargo</title>
     <link rel="stylesheet" href="about.css"> <!-- Specific styles for About Us page -->
-    <!-- Boxicons for additional icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Boxicons for icons -->
 </head>
 <body>
     <header>
@@ -15,8 +14,13 @@
                 <img src="logo.png" alt="Sargo Tools Logo" class="logo">
             </a>
         </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="awards.html">Awards</a></li>
@@ -36,11 +40,8 @@
         <!-- About Content Section -->
         <section class="about-content">
             <div class="about-description">
-                <p><strong>Sargo Tools Pvt. Ltd.</strong> is in the business of manufacturing tubular components & sheet metal components along with other turned and machined parts from the last three decades. The company is ISO 9001:2015 certified and working actively to achieve the target of IATF 16949 soon. The company is an approved Tier-2 supplier for <strong>MARUTI</strong> and has also successfully completed MACE activity program for system implementation launched by Maruti. The company has two manufacturing units in Faridabad and Palwal area of Haryana, India.</p>
+                <p><strong>Sargo Tools Pvt. Ltd.</strong> is in the business of manufacturing tubular components & sheet metal components along with other turned and machined parts for the last three decades. The company is ISO 9001:2015 certified and working actively to achieve the target of IATF 16949 soon. The company is an approved Tier-2 supplier for <strong>MARUTI</strong> and has also successfully completed the MACE activity program for system implementation launched by Maruti. The company has two manufacturing units in the Faridabad and Palwal areas of Haryana, India.</p>
             </div>
-            <!-- <div class="about-image">
-                <img src="images/about.jpg" alt="Sargo Tools Team">
-            </div> -->
         </section>
 
         <!-- About Features Section with Card Flip Effect -->
@@ -54,7 +55,7 @@
                         <h3>Quality Policy</h3>
                     </div>
                     <div class="card-back">
-                        <p>Company is committed to provide its customers the products with zero defects.</p>
+                        <p>Company is committed to providing its customers with products with zero defects.</p>
                     </div>
                 </div>
             </div>
@@ -80,14 +81,13 @@
                         <h3>Client Satisfaction</h3>
                     </div>
                     <div class="card-back">
-                        <p>We adopt a client-centric approach in all our business ventures. With our ethical business practices and best quality products.</p>
+                        <p>We adopt a client-centric approach in all our business ventures, with ethical business practices and top-quality products.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <!-- <hr class="footer-underline"> -->
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Sargo Tools Pvt. Ltd.</h3>
@@ -109,16 +109,6 @@
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <hr class="footer-underline">
-                <!-- <p>
-                    <i class="icon-address"></i>
-                    <a href="contact.html#unit1-map">Sargo Tools Pvt. Ltd. - Unit 1</a><br>
-                    12/2, Mathura Road, Faridabad, Haryana - 121003
-                </p>
-                <p>
-                    <i class="icon-address"></i>
-                    <a href="contact.html#unit2-map">Sargo Tools Pvt. Ltd. - Unit 2</a><br>
-                    Vill. JATOLA, TATARPUR Ind. Area, Palwal, Haryana - 121102
-                </p> -->
                 <p>
                     <i class="icon-email"></i>
                     <a href="mailto:sargotools@yahoo.com">sargotools@yahoo.com</a>
@@ -137,5 +127,15 @@
             <p>&copy; 2024 Sargo Tools Pvt. Ltd. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
