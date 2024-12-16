@@ -327,7 +327,7 @@ nav ul li a:hover {
     position: relative;
     /* width: 100%; Ensure it takes full width */
     height: 450px;
-     background-image: url('purpose2.jpeg');
+    background-image: url('../images/purpose2.jpeg');
     background-size: cover; /* Make the image cover the section without grey space */
     background-position: center; /* Center the image */
     background-repeat: no-repeat;
@@ -583,6 +583,36 @@ footer {
 
     .purpose-section p{
         font-size: 0.8rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px; /* Positioned below the header */
+        right: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        color: #fff;
+    }
+
+    nav ul li a:hover {
+        color: #fdc645;
     }
 
     /* Footer Adjustments */
