@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products - Sargo Tools</title>
-<!--     <link rel="stylesheet" href="css/styles.css"> <!-- Base styles --> 
+    <link rel="stylesheet" href="css/styles.css"> <!-- Base styles -->
     <link rel="stylesheet" href="products.css"> <!-- Specific styles for Product page -->
 </head>
 <body>
     <header class="scroll-animate">
         <div class="logo-container">
             <a href="index.html">
-                <img src="logo.png" alt="Sargo Tools Logo" class="logo">
+                <img src="images/logo.png" alt="Sargo Tools Logo" class="logo">
             </a>
         </div>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="products.html">Our Products</a></li>
-                <li><a href="clients.html">Our Clients</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="clients.html">Our Clients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
     <main>
         <!-- Product Header Section -->
         <section class="product-header scroll-animate">
@@ -37,65 +42,65 @@
             <div class="product-grid">
                 <!-- Existing products -->
                 <div class="product-card">
-                    <img src="turned-components.jpeg" alt="Turned Components">
+                    <img src="images/turned-components.jpeg" alt="Turned Components">
                     <h3>Turned Components</h3>
                 </div>
                 <div class="product-card">
-                    <img src="mounting-sleeve.jpeg" alt="Mounting Sleeves">
+                    <img src="images/mounting-sleeve.jpeg" alt="Mounting Sleeves">
                     <h3>Mounting Sleeves</h3>
                 </div>
                 <div class="product-card">
-                    <img src="loops.jpeg" alt="Loops">
+                    <img src="images/loops.jpeg" alt="Loops">
                     <h3>Loops</h3>
                 </div>
                 <div class="product-card">
-                    <img src="taper-id-loop.jpeg" alt="Taper I/D Loop">
+                    <img src="images/taper-id-loop.jpeg" alt="Taper I/D Loop">
                     <h3>Taper I/D Loop</h3>
                 </div>
                 <div class="product-card">
-                    <img src="turned-rolled-loop.jpeg" alt="Turned Rolled Loops">
+                    <img src="images/turned-rolled-loop.jpeg" alt="Turned Rolled Loops">
                     <h3>Turned Rolled Loops</h3>
                 </div>
                 <div class="product-card">
-                    <img src="suspension-bushes.jpeg" alt="Suspension Bushes">
+                    <img src="images/suspension-bushes.jpeg" alt="Suspension Bushes">
                     <h3>Suspension Bushes</h3>
                 </div>
                 <div class="product-card">
-                    <img src="arm-shaft.jpeg" alt="Arm Shaft">
+                    <img src="images/arm-shaft.jpeg" alt="Arm Shaft">
                     <h3>Arm Shaft</h3>
                 </div>
                 <div class="product-card">
-                    <img src="piston-rod.jpeg" alt="Piston Rod / Super Finished Shaft">
+                    <img src="images/piston-rod.jpeg" alt="Piston Rod / Super Finished Shaft">
                     <h3>Piston Rod / Super Finished Shaft</h3>
                 </div>
                 <div class="product-card">
-                    <img src="sheet-metal-parts.jpeg" alt="Sheet Metal Parts">
+                    <img src="images/sheet-metal-parts.jpeg" alt="Sheet Metal Parts">
                     <h3>Sheet Metal Parts</h3>
                 </div>
                 <div class="product-card">
-                    <img src="sheet-rolled-loops.jpeg" alt="Sheet Rolled Loop">
+                    <img src="images/sheet-rolled-loops.jpeg" alt="Sheet Rolled Loop">
                     <h3>Sheet Rolled Loop</h3>
                 </div>
                 <div class="product-card">
-                    <img src="casing-bottom.jpeg" alt="Casing Bottom Sub Assemblies For Shockers">
+                    <img src="images/casing-bottom.jpeg" alt="Casing Bottom Sub Assemblies For Shockers">
                     <h3>Casing Bottom Sub Assemblies For Shockers</h3>
                 </div>
                 <div class="product-card">
-                    <img src="attachment rings.jpeg" alt="Attachment Rings">
+                    <img src="images/attachment rings.jpeg" alt="Attachment Rings">
                     <h3>Attachment Rings</h3>
                 </div>
                 <div class="product-card">
-                    <img src="swagged loops.jpeg" alt="Swaged Loops">
+                    <img src="images/swagged loops.jpeg" alt="Swaged Loops">
                     <h3>Swaged Loops</h3>
                 </div>
                 <div class="product-card">
-                    <img src="retainercylinder ends.jpeg" alt="Retainer/Cylinder Ends">
+                    <img src="images/retainercylinder ends.jpeg" alt="Retainer/Cylinder Ends">
                     <h3>Retainer/Cylinder Ends</h3>
                 </div>
         
                 <!-- Newly added products -->
                 <div class="product-card">
-                    <img src="retainer.jpeg" alt="Retainer">
+                    <img src="images/retainer.jpeg" alt="Retainer">
                     <h3>Retainer</h3>
                 </div>
             </div>
@@ -182,6 +187,14 @@
             });
 
             handleScrollAnimation(); // Trigger animations for elements in view on load
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
         });
     </script>
 </body>
